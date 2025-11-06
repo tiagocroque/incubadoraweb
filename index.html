@@ -1,303 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fluxo - Saída de Campo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f0f4f8;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 20px;
-    }
-    .container-main {
-      max-width: 1100px;
-      width: 100%;
-      background-color: #ffffff;
-      padding: 2.5rem;
-      border-radius: 1rem;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
-        0 0 10px rgba(0, 0, 0, 0.05);
-    }
-    .timeline {
-      position: relative;
-      padding-left: 2rem;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0.9rem;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: linear-gradient(to bottom, #6ee7b7, #10b981);
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 1.5rem;
-    }
-    .timeline-icon {
-      position: absolute;
-      left: -0.1rem;
-      top: 0.4rem;
-      width: 1.4rem;
-      height: 1.4rem;
-      border-radius: 9999px;
-      background: #10b981;
-      border: 3px solid #ecfdf5;
-      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
-    }
-    .role-badge {
-      font-size: 0.7rem;
-      letter-spacing: 0.04em;
-    }
-  </style>
+    <link rel="stylesheet" href="Style.css"
+    <meta charset="UTF-8">
+    <title>Incubadora de empresa</title>
 </head>
 <body>
-  <div class="container-main">
-    <header class="mb-8 pb-4 border-b-4 border-emerald-500">
-      <h1 class="text-3xl font-bold text-center text-emerald-700">
-        Fluxo – Saída de Campo
-      </h1>
-      <p class="text-center text-gray-500 mt-1">
-        Passo a passo para planejamento, execução e registro institucional.
-      </p>
-    </header>
-
-    <!-- Legenda -->
-    <section class="mb-8">
-      <h2 class="text-xl font-semibold text-gray-700 mb-3 flex items-center">
-        <span class="w-2 h-6 bg-emerald-500 rounded-full mr-2"></span>
-        Responsáveis no processo
-      </h2>
-      <div class="flex flex-wrap gap-2 text-xs">
-        <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-semibold role-badge">PROFESSOR(A)</span>
-        <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 font-semibold role-badge">COORDENAÇÃO</span>
-        <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-800 font-semibold role-badge">SECRETARIA</span>
-        <span class="px-3 py-1 rounded-full bg-fuchsia-100 text-fuchsia-800 font-semibold role-badge">RH / COMPRAS</span>
-        <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 font-semibold role-badge">ALUNOS / FAMÍLIAS</span>
-      </div>
-    </section>
-
-    <!-- Timeline -->
-    <section>
-      <h2 class="text-xl font-semibold text-gray-700 mb-4 flex items-center">
-        <span class="w-2 h-6 bg-emerald-500 rounded-full mr-2"></span>
-        Linha do tempo do fluxo
-      </h2>
-
-      <div class="timeline">
-
-        <!-- 1 -->
-        <div class="timeline-item">
-          <div class="timeline-icon"></div>
-          <div class="ml-6 p-4 bg-emerald-50 rounded-lg border border-emerald-200 shadow-sm">
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-bold text-emerald-800 text-lg">1. Disparo da Solicitação</h3>
-              <span class="px-3 py-1 rounded-full bg-emerald-600 text-white role-badge">PROFESSOR(A)</span>
-            </div>
-            <p class="text-sm text-gray-700">
-              O(a) professor(a) responsável pela turma solicita formalmente a saída de campo ao(à) Coordenador(a), já indicando se a atividade será
-              <strong>apenas no bairro</strong> ou <strong>externa ao bairro</strong>.
-            </p>
-          </div>
-        </div>
-
-        <!-- 2 -->
-        <div class="timeline-item">
-          <div class="timeline-icon"></div>
-          <div class="ml-6 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-bold text-gray-800 text-lg">2. Definição do Roteiro e Dados da Atividade</h3>
-              <span class="px-3 py-1 rounded-full bg-emerald-600 text-white role-badge">PROFESSOR(A)</span>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-4 mt-2">
-              <div class="p-3 rounded-md bg-emerald-50 border border-emerald-100">
-                <h4 class="font-semibold text-emerald-800 text-sm mb-1">2.1. Saída apenas no bairro</h4>
-                <ul class="list-disc ml-5 text-sm text-gray-700 mt-1 space-y-0.5">
-                  <li>Tema da saída</li>
-                  <li>Objetivo pedagógico</li>
-                  <li>Turma(s) envolvidas</li>
-                  <li>Data(s)</li>
-                  <li>Horário de início e término</li>
-                </ul>
-              </div>
-
-              <div class="p-3 rounded-md bg-emerald-50 border border-emerald-100">
-                <h4 class="font-semibold text-emerald-800 text-sm mb-1">2.2. Saída externa ao bairro</h4>
-                <ul class="list-disc ml-5 text-sm text-gray-700 mt-1 space-y-0.5">
-                  <li>Tema e objetivo pedagógico</li>
-                  <li>Turma(s) e número de alunos</li>
-                  <li>Data(s) e horários de saída e retorno</li>
-                  <li>Tipo de transporte (Uber, Van, Micro, Ônibus)</li>
-                  <li>Informar que é obrigatório documento oficial (RG ou Certidão de Nascimento)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3 -->
-        <div class="timeline-item">
-          <div class="timeline-icon"></div>
-          <div class="ml-6 p-4 bg-fuchsia-50 rounded-lg border border-fuchsia-200 shadow-sm">
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-bold text-fuchsia-800 text-lg">3. Orçamentos, Transporte e Agendamentos</h3>
-              <span class="px-3 py-1 rounded-full bg-fuchsia-600 text-white role-badge">RH / COMPRAS</span>
-            </div>
-            <p class="text-sm text-gray-700">
-              Após a validação da Coordenação, o fluxo segue para o RH / Compras.
-              <strong>Pamela</strong> realiza orçamentos (transporte, ingressos, serviços) e efetua o agendamento conforme o orçamento disponível.
-            </p>
-          </div>
-        </div>
-
-        <!-- 4 -->
-        <div class="timeline-item">
-          <div class="timeline-icon"></div>
-          <div class="ml-6 p-4 bg-amber-50 rounded-lg border border-amber-200 shadow-sm">
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-bold text-amber-900 text-lg">4. Emissão da Declaração de Saída de Campo</h3>
-              <span class="px-3 py-1 rounded-full bg-amber-500 text-white role-badge">SECRETARIA</span>
-            </div>
-            <p class="text-sm text-gray-700">
-              Com a proposta aprovada, a Coordenação/Professor(a) solicita à Secretaria a emissão da
-              <strong>Declaração de Saída de Campo</strong>. Juliana gera o documento para saídas no bairro e externas ao bairro.
-            </p>
-          </div>
-        </div>
-
-        <!-- 5 -->
-        <div class="timeline-item">
-          <div class="timeline-icon"></div>
-          <div class="ml-6 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-bold text-gray-800 text-lg">5. Comunicação às Famílias e Autorizações</h3>
-              <div class="flex gap-2">
-                <span class="px-3 py-1 rounded-full bg-emerald-600 text-white role-badge">PROFESSOR(A)</span>
-                <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-700 role-badge">ALUNOS / FAMÍLIAS</span>
-              </div>
-            </div>
-            <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
-              <li>Professor(a) envia a declaração/autorização aos alunos com <strong>mínimo 48h de antecedência</strong>.</li>
-              <li>Professor(a) recolhe as declarações assinadas pelos responsáveis.</li>
-              <li>Sem autorização, o aluno não participa da saída.</li>
-            </ul>
-
-            <div class="mt-3 p-3 bg-yellow-100 border-l-4 border-yellow-500 rounded-md flex items-start gap-2">
-              <span class="text-yellow-600 text-lg">⚠️</span>
-              <p class="text-sm text-yellow-800">
-                <strong>Observação:</strong> Solicitar à <strong>colaboradora Juliana</strong>, da recepção,
-                que envie mensagens individuais via <strong>WhatsApp</strong> às famílias dos alunos da
-                <strong>inclusão</strong>, comunicando sobre a saída de campo e destacando os casos que demandam
-                apoio adicional. Além disso, é necessário dialogar com o(a)
-                <strong>docente de apoio</strong> responsável pelo acompanhamento desses alunos durante a
-                atividade, assegurando a integração com a turma.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6 -->
-        <div class="timeline-item">
-          <div class="timeline-icon"></div>
-          <div class="ml-6 p-4 bg-emerald-50 rounded-lg border border-emerald-200 shadow-sm">
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-bold text-emerald-900 text-lg">6. Organização de Logística e Suprimentos</h3>
-              <div class="flex gap-2">
-                <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 role-badge">PROFESSOR(A)</span>
-                <span class="px-3 py-1 rounded-full bg-fuchsia-100 text-fuchsia-800 role-badge">RH / COMPRAS</span>
-                <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 role-badge">COORDENAÇÃO</span>
-              </div>
-            </div>
-            <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
-              <li>Iniciar processo de compras com <strong>mínimo de 15 dias</strong>, quando houver custos.</li>
-              <li>Organizar alimentação (lanches, água), considerando restrições alimentares.</li>
-              <li>Orientar sobre roupas e itens pessoais: agasalhos, protetor solar, bonés, capa de chuva.</li>
-              <li>Verificar materiais/equipamentos necessários (kit de primeiros socorros, cadernos, câmeras etc.).</li>
-              <li>Reforçar a obrigatoriedade do <strong>documento oficial</strong> para saídas externas.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 7 -->
-        <div class="timeline-item">
-          <div class="timeline-icon"></div>
-          <div class="ml-6 p-4 bg-blue-50 rounded-lg border border-blue-200 shadow-sm">
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-bold text-blue-900 text-lg">7. Cobertura de Aulas das Turmas Não Envolvidas</h3>
-              <span class="px-3 py-1 rounded-full bg-emerald-600 text-white role-badge">PROFESSOR(A)</span>
-            </div>
-            <p class="text-sm text-gray-700">
-              O(a) professor(a) encaminha plano de aula para as turmas não envolvidas na saída, garantindo
-              <strong>atividade a mais do que a menos</strong> para o professor substituto.
-            </p>
-          </div>
-        </div>
-
-        <!-- 8 -->
-        <div class="timeline-item">
-          <div class="timeline-icon"></div>
-          <div class="ml-6 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-bold text-gray-800 text-lg">8. Dia da Saída de Campo – Execução</h3>
-              <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 role-badge">PROFESSOR(A) + EQUIPE</span>
-            </div>
-            <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
-              <li>Conferir lista de presença, autorizações e documentos oficiais (quando for externa).</li>
-              <li>Verificar materiais, alimentação e equipamentos.</li>
-              <li>Garantir a segurança e o cumprimento do objetivo pedagógico.</li>
-              <li>Registrar evidências da atividade (fotos, relatos, anotações, etc.).</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 9 -->
-        <div class="timeline-item">
-          <div class="timeline-icon"></div>
-          <div class="ml-6 p-4 bg-emerald-50 rounded-lg border border-emerald-200 shadow-sm">
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-bold text-emerald-900 text-lg">9. Pós-Saída – Devolutiva Pedagógica e Relatório</h3>
-              <div class="flex gap-2">
-                <span class="px-3 py-1 rounded-full bg-emerald-600 text-white role-badge">PROFESSOR(A)</span>
-                <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-800 role-badge">COORDENAÇÃO</span>
-              </div>
-            </div>
-            <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
-              <li>Realizar atividade de fechamento/avaliação da saída com os alunos (relatos, painel, produções etc.).</li>
-              <li>Entregar o <strong>Relatório da Saída</strong> à Coordenação, com síntese do percurso, objetivos, aprendizagens e pontos de melhoria.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 10 -->
-        <div class="timeline-item">
-          <div class="timeline-icon"></div>
-          <div class="ml-6 p-4 bg-slate-50 rounded-lg border border-slate-200 shadow-sm">
-            <div class="flex items-center justify-between mb-1">
-              <h3 class="font-bold text-slate-900 text-lg">10. Arquivo Institucional e Evidências</h3>
-              <span class="px-3 py-1 rounded-full bg-slate-700 text-white role-badge">COORDENAÇÃO + SECRETARIA</span>
-            </div>
-            <ul class="list-disc ml-5 text-sm text-gray-700 space-y-1">
-              <li>Arquivamento do Relatório de Saída.</li>
-              <li>Guarda das autorizações das famílias.</li>
-              <li>Registro da saída como evidência pedagógica e institucional.</li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section>
+  <link rel="stylesheet" href="Style.css">
+  <body>
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" id="btn-muda-cor" class="w3-bar-item w3-large">☰</button>
+    <a id="btn-muda-cor" href="index.html" class="w3-bar-item w3-button">O que é Incubadora?</a>
+    <a id="btn-muda-cor"href="tiposDeIncubadoras.html" class="w3-bar-item w3-button">Tipos de incubadoras</a>
+    <a id="btn-muda-cor"href="faseDeIncubacao.html" class="w3-bar-item w3-button">Fases de incubação</a>
+    <a id="btn-muda-cor"href="vantagens.html" class="w3-bar-item w3-button">Vantagens</a>
   </div>
+  <div class="w3-teal">
+    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+    <div class="w3-container">
+        <h1>Incubadora de empresa e ideias</h1>
+    </div>
+  </div>
+
+  <script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
+  <div class ="grid-box-principal">
+    <div class="grid-item-index">
+      <img src="http://www.unesc.net/portal/resources/assets/template/53/images/logomarca_iali.png" alt="Incubadoras">
+    </div>
+    <div class="grid-item-index">
+      <img src="http://www.unesc.net/portal/resources/assets/template/53/images/logomarca_ipat.png" alt="Incubadoras">
+    </div>
+    <div class="grid-item-index">
+      <img src="http://www.unesc.net/portal/resources/assets/template/53/images/logomarca_idt.png" alt="Incubadoras">
+    </div>
+    <div class="grid-item-index">
+      <img src="http://www.unesc.net/portal/resources/assets/template/53/images/logomarca_itec-in.png" alt="Incubadoras">
+    </div>
+    <div class="grid-item-index">
+      <img src="http://www.unesc.net/portal/resources/assets/template/53/images/logomarca_ipese.png" alt="Incubadoras">
+    </div>
+    <div class="grid-item-index">
+      <img src="http://www.unesc.net/portal/resources/assets/template/53/images/logomarca_idt.png" alt="Incubadoras">
+    </div>
+  </div>
+  <p id="p_principal">O objetivo da ITEC.in – Incubadora Tecnológica de Ideias e Negócios tem como objetivo incentivar e apoiar a criação de empreendimentos inovadores, incentivar a produção de conhecimento, consolidar empresas nascentes e contribuir para a geração de emprego e renda da região oferecendo infraestrutura adequada e orientações mercadológicas.</p>
+  <p id="p_principal">A ITEC.in, do Parque Científico e Tecnológico da Unesc (Iparque), finalizou, em dezembro de 2012, o processo de construção de suas novas instalações para incubação de empresas. O novo prédio possui 16 salas privativas, todas com mobiliário e equipamentos de TI.</p>
+  <p id="p_principal">A ITEC.in conta, também, com a sala de coordenação administrativa, banheiros e sala de reuniões. Além disso, é disponibilizado aos incubados o compartilhamento das salas de treinamento, biblioteca, cantina e outros recursos relacionados à infraestrutura.</p>
+  <p id="p_principal">Uma incubadora de empresas é um mecanismo que estimula a criação e o desenvolvimento de micro e pequenas empresas (industriais, de prestação de serviços, de base tecnológica ou de manufaturas leves), apresentando e realizando suporte técnico, gerencial e formação complementar do empreendedor. Uma incubadora tem por finalidade facilitar e acelerar o processo de inovação tecnológica nas micro e pequenas empresas.</p>
+  <p id="p_principal">As incubadoras de empresas são locais onde nascem, crescem e desenvolvem-se pequenos negócios, normalmente de base tecnológica (que têm no conhecimento seu principal insumo de produção, assistidos por uma infra-estrutura comum e, por vezes com a presença de uma Universidade, de forma a transformar ideias em produtos, serviços e processos). São também formas de unir tecnologia, capital e know how para alavancar o talento empreendedor e acelerar o desenvolvimento de novas empresas</p>
+    <footer>
+      <small> Projeto Tiago Cesconeto Roque | Digital House | Facebook </small>
+    </footer>
 </body>
 </html>
